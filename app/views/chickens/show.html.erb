@@ -1,0 +1,15 @@
+<p><strong>Bookings</strong></p>
+
+<% if @bookings.blank? %>
+<p>There are not any bookings currently in the system.</p>
+<% else %>
+<p>These are the current bookings in our system</p>
+<% end %>
+
+<ul class="list-group">
+  <% @chicken.bookings.each do |booking| %>
+    <li class="list-group-item"><%= booking.breed.price.description %></li>
+     <p><%= link_to booking.breed "Add new Booking"%></p>
+  <% end %>
+</ul>
+<br>

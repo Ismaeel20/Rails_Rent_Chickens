@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get "bookings/:id", to: "bookings#show"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
+
   # Defines the root path route ("/")
-  # root "articles#index"
+  root to: "pages#home"
 end
+# Defines the root path route ("/")
+# root "articles#index"
