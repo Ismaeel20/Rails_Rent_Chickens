@@ -11,3 +11,13 @@ puts "cleaing database"
 
 puts "creating users"
 edward = User.create(email: "chicken@lewagon.com", password: "123456")
+
+Chicken.create(user_id, chicken_id)
+
+# Chicken.create!([{
+#   breed: "Wild chicken",
+#   description: "A wild angry chicken",
+#   price: "20"
+#   }])
+
+  p "There are #{Chicken.count} chickens"
