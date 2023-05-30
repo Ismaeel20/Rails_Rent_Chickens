@@ -1,26 +1,26 @@
 body {
-  background-image: url('mother-chick-lf9fn3pwd7szz8zl.jpg');
+  background-image: url('https://img.freepik.com/premium-vector/chicken-egg-seamless-pattern-background_42349-416.jpg?w=2000');
   background-size: cover;
   background-position: center;
 }
 .container {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   font-family: 'Luckiest Guy', cursive;
-  color: black;
+  color:  #d7b28c;
 }
 .text{
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 70px;
+  margin-top: 50px;
   font-family: 'Luckiest Guy', cursive;
-  color: black;
+  color:  #d7b28c;
 }
 .button {
   display: inline-block;
@@ -36,7 +36,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  margin-top: 230px;
+  margin-top: 280px;
+  box-shadow: 15px;
+  text-decoration: none;
+  box-shadow: 0.5px 0.5px 0.5px black;
 }
 
 .button:hover {
@@ -45,4 +48,7 @@ body {
 
 .button:focus {
   outline: none;
+}
+.navbar {
+  border-style: solid;
 }
