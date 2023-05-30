@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: "pages#home"
+  devise_for :users
+  resources :chickens, only: [:new, :create, :index, :show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :chickens, only: [:new, :create, :index, :show]
 end
