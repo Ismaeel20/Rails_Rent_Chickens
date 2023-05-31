@@ -11,7 +11,6 @@ puts "cleaing database"
 Chicken.destroy_all
 User.destroy_all
 
-
 puts "creating users"
 edward = User.create!(email: "chicken@lewagon.com", password: "123456")
 user1 = User.create!(email: 'user1@example.com', password: 'password1')
@@ -49,10 +48,18 @@ chicken_6.photo.attach(io: file, filename: "/Silky_bantam.jpg", content_type: "i
 chicken_6.user = user3
 chicken_6.save!
 
+Booking.create(user_id: 1, chicken_id: 1, start_date: Date.today, end_date: Date.today + 7)
+Booking.create(user_id: 2, chicken_id: 2, start_date: Date.today + 3, end_date: Date.today + 10)
+Booking.create(user_id: 3, chicken_id: 3, start_date: Date.today + 2, end_date: Date.today + 9)
+Booking.create(user_id: 1, chicken_id: 4, start_date: Date.today + 5, end_date: Date.today + 12)
 
+<<<<<<< HEAD
 Booking.create(user_id: 1, chicken_id: 1, start_date: Date.today, end_date: Date.today + 7)
 Booking.create(user_id: 2, chicken_id: 2, start_date: Date.today + 3, end_date: Date.today + 10)
 Booking.create(user_id: 3, chicken_id: 3, start_date: Date.today + 2, end_date: Date.today + 9)
 Booking.create(user_id: 1, chicken_id: 4, start_date: Date.today + 5, end_date: Date.today + 12)
 
   p "There are #{Chicken.count} chickens"
+=======
+p "There are #{Chicken.count} chickens"
+>>>>>>> a65e690b6278bdc21090184bbba2661c1d46f3fc

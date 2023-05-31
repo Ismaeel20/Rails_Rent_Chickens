@@ -1,0 +1,24 @@
+<h1>Edit Chicken</h1>
+
+<%= form_with(model: @chicken, url: chicken_path(@chicken), method: :patch) do |form| %>
+  <div class="field">
+    <%= form.label :breed %>
+    <%= form.text_field :breed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Update Chicken' %>
+  </div>
+<% end %>
+
+<p><%= link_to 'Back to Chicken', chicken_path(@chicken) %></p>
