@@ -15,6 +15,9 @@ class ChickensController < ApplicationController
     @chicken = Chicken.find(params[:id])
   end
 
+  def edit
+    @chicken = Chicken.find(params[:id])
+  end
 
   def create
     @chicken = Chicken.new(chicken_params)
