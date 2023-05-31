@@ -8,7 +8,8 @@
     <%# <li> %>
     <%# <div class = "chicken-container"> %>
     <div class="chicken-container card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+    <%=  cl_image_tag(chicken.photo.key,
+          width: 400, height: 300, crop: :fill)  %>
   <div class="card-body">
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   <%# </div> %>
