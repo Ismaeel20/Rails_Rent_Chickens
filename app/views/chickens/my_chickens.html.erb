@@ -1,1 +1,25 @@
 <h1>Hello</h1>
+
+<div class= "text-center font-weight-bold">
+
+<h1>Your chickens</h1>
+</div>
+
+<div class="cards">
+
+  <% @chickens.each do |chicken| %>
+    <%# <li> %>
+    <%# <div class = "chicken-container"> %>
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  <%# </div> %>
+    <%= link_to chicken.breed, chicken_path(chicken) %>
+    <%# <p><strong>Description:</strong> <%= chicken.description %></p>
+    <p><strong>Price:</strong> $<%= chicken.price %></p>
+  </div>
+    <%# </li> %>
+  <% end %>
+</div>
