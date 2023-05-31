@@ -10,13 +10,11 @@ puts "cleaing database"
 Chicken.destroy_all
 User.destroy_all
 
-
 puts "creating users"
 edward = User.create!(email: "chicken@lewagon.com", password: "123456")
 user1 = User.create!(email: 'user1@example.com', password: 'password1')
 user2 = User.create!(email: 'user2@example.com', password: 'password2')
 user3 = User.create!(email: 'user3@example.com', password: 'password3')
-
 
 chicken_1 = Chicken.new(breed: "Wild chicken", description: "A wild angry chicken", price: "20")
 chicken_1.user = edward
@@ -38,10 +36,9 @@ chicken_6 = Chicken.new(breed: 'Buff Orpington', description: 'Gentle and good w
 chicken_6.user = user3
 chicken_6.save!
 
+Booking.create(user_id: 1, chicken_id: 1, start_date: Date.today, end_date: Date.today + 7)
+Booking.create(user_id: 2, chicken_id: 2, start_date: Date.today + 3, end_date: Date.today + 10)
+Booking.create(user_id: 3, chicken_id: 3, start_date: Date.today + 2, end_date: Date.today + 9)
+Booking.create(user_id: 1, chicken_id: 4, start_date: Date.today + 5, end_date: Date.today + 12)
 
-# Booking.create(user_id: 1, chicken_id: 1, start_date: Date.today, end_date: Date.today + 7)
-# Booking.create(user_id: 2, chicken_id: 2, start_date: Date.today + 3, end_date: Date.today + 10)
-# Booking.create(user_id: 3, chicken_id: 3, start_date: Date.today + 2, end_date: Date.today + 9)
-# Booking.create(user_id: 1, chicken_id: 4, start_date: Date.today + 5, end_date: Date.today + 12)
-
-  p "There are #{Chicken.count} chickens"
+p "There are #{Chicken.count} chickens"
