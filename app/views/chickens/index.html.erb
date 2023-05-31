@@ -3,20 +3,21 @@
 <h1>Select a Chicken</h1>
 </div>
 
-<ul>
+<div class="cards">
+
   <% @chickens.each do |chicken| %>
     <%# <li> %>
     <%# <div class = "chicken-container"> %>
-    <div class="chicken-container card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
   <%# </div> %>
-</div>
-      <%= link_to chicken.breed, chicken_path(chicken) %>
-      <%# <p><strong>Description:</strong> <%= chicken.description %></p>
-      <p><strong>Price:</strong> $<%= chicken.price %></p>
-      </div>
+    <%= link_to chicken.breed, chicken_path(chicken) %>
+    <%# <p><strong>Description:</strong> <%= chicken.description %></p>
+    <p><strong>Price:</strong> $<%= chicken.price %></p>
+  </div>
     <%# </li> %>
   <% end %>
-</ul>
+</div>
