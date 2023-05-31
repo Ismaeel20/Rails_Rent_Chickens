@@ -10,7 +10,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   font-family: 'Luckiest Guy', cursive;
-  color:  #d7b28c;
+  color:  #9e7e5e;
 }
 .text{
   position: absolute;
@@ -20,7 +20,7 @@ body {
   text-align: center;
   margin-top: 50px;
   font-family: 'Luckiest Guy', cursive;
-  color:  #d7b28c;
+  color:  #9e7e5e;
 }
 .button {
   display: inline-block;
@@ -51,4 +51,14 @@ body {
 }
 .navbar {
   border-style: solid;
+}
+
+
+.chicken-container {
+  // position: fixed;
+  text-align: center;
+  background-color: white;
+  padding: px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

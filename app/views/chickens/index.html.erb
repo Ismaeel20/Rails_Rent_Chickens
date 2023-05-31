@@ -1,0 +1,36 @@
+<h1>Select a Chicken</h1>
+
+<ul>
+  <% @chickens.each do |chicken| %>
+    <li>
+    <div class = "chicken-container">
+      <%= link_to chicken.breed, chicken_path(chicken) %>
+      <p><strong>Description:</strong> <%= chicken.description %></p>
+      <p><strong>Price:</strong> $<%= chicken.price %></p>
+      </div>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Create a Chicken</h2>
+
+<%= form_with model: Chicken.new, url: chickens_path do |form| %>
+  <div class="field">
+    <%= form.label :breed %>
+    <%= form.text_field :breed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Create Chicken' %>
+  </div>
+<% end %>
