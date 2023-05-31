@@ -1,7 +1,6 @@
 class ChickensController < ApplicationController
   def new
-    @chicken = Chicken.find(params[:chicken_id])
-    @booking = Booking.new
+    @chicken = Chicken.new
   end
 
   def index
@@ -15,6 +14,7 @@ class ChickensController < ApplicationController
   def show
     @chicken = Chicken.find(params[:id])
   end
+
 
   def create
     @chicken = Chicken.new(chicken_params)
