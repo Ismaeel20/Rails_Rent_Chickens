@@ -4,3 +4,10 @@
    <li><%= booking.start_date %></li>
   <%end %>
 </ul>
+
+
+<% if @bookings.blank? %>
+<p>There are not any bookings currently in the system.</p>
+<% else %>
+<p>These are the current bookings in our system</p>
+<% end %>
