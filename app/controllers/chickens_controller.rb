@@ -8,6 +8,10 @@ class ChickensController < ApplicationController
     @chickens = Chicken.all
   end
 
+  def my_chickens
+    @chickens = Chicken.where(user: current_user)
+  end
+
   def show
     @chicken = Chicken.find(params[:id])
   end
@@ -21,5 +25,11 @@ class ChickensController < ApplicationController
     @chicken.user = current_user
     @chicken.save
     redirect_to chicken_path(@chicken)
+  end
+
+  private
+
+  def chicken_params
+    params.require(:chicken).permit(:breed, :description, :price)
   end
 end

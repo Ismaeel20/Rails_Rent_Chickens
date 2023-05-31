@@ -1,38 +1,23 @@
 <div class= "text-center font-weight-bold">
+
 <h1>Select a Chicken</h1>
 </div>
 
-<ul>
+<div class="cards">
+
   <% @chickens.each do |chicken| %>
     <%# <li> %>
-    <div class = "chicken-container">
-      <%= link_to chicken.breed, chicken_path(chicken) %>
-      <p><strong>Description:</strong> <%= chicken.description %></p>
-      <p><strong>Price:</strong> $<%= chicken.price %></p>
-      </div>
+    <%# <div class = "chicken-container"> %>
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text"></p>
+    </div>
+  <%# </div> %>
+    <%= link_to chicken.breed, chicken_path(chicken) %>
+    <%# <p><strong>Description:</strong> <%= chicken.description %></p>
+    <p><strong>Price:</strong> $<%= chicken.price %></p>
+  </div>
     <%# </li> %>
   <% end %>
-</ul>
-
-<h2>Add a Chicken</h2>
-
-<%= form_with model: Chicken.new, url: chickens_path do |form| %>
-  <div class="field">
-    <%= form.label :breed %>
-    <%= form.text_field :breed %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit 'Create Chicken' %>
-  </div>
-<% end %>
+</div>

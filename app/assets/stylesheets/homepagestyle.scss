@@ -64,3 +64,22 @@ body {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  padding-left: 45px;
+
+}
+
+.chicken-show {
+  margin-right: 150px;
+  margin-left: 170px;
+  margin-top: 15px;
+  text-align: center;
+  background-color: white;
+  padding: px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

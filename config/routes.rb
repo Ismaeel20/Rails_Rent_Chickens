@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "bookings", to: "bookings#index"
   get "bookings/new", to: "bookings#new"
   get "bookings/:id", to: "bookings#show"
+
+  get 'my_chickens', to: "chickens#my_chickens"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
 
