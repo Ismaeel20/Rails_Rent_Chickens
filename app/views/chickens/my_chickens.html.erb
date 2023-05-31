@@ -1,4 +1,4 @@
-<h1>Hello</h1>
+<%# <h1>Hello</h1> %>
 
 <div class= "text-center font-weight-bold">
 
@@ -21,10 +21,12 @@
     <p><strong>Price:</strong> $<%= chicken.price %></p>
     <%= link_to 'Edit Chicken', edit_chicken_path(chicken) %>
     <%= button_to 'Delete Chicken', chicken, method: :delete, data: { confirm: 'Are you sure you want to delete this chicken?' } %>
+
   </div>
     <%# </li> %>
   <% end %>
 
 </div>
+<h3><%= link_to 'Create Chicken', new_chicken_path %><h3>
 <h3><%= link_to 'Back to Chicken List', chickens_path %></h3>
   </p>
