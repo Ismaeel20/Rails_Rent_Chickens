@@ -1,18 +1,20 @@
+<div class= "text-center font-weight-bold">
 <h1>Select a Chicken</h1>
+</div>
 
 <ul>
   <% @chickens.each do |chicken| %>
-    <li>
+    <%# <li> %>
     <div class = "chicken-container">
       <%= link_to chicken.breed, chicken_path(chicken) %>
       <p><strong>Description:</strong> <%= chicken.description %></p>
       <p><strong>Price:</strong> $<%= chicken.price %></p>
       </div>
-    </li>
+    <%# </li> %>
   <% end %>
 </ul>
 
-<h2>Create a Chicken</h2>
+<h2>Add a Chicken</h2>
 
 <%= form_with model: Chicken.new, url: chickens_path do |form| %>
   <div class="field">
