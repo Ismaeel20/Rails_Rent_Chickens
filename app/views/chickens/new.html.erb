@@ -1,5 +1,28 @@
-<h1>New Chickens</h1>
+<%# <h1>New Chickens</h1>
 <%= simple_form_for [@chicken, @booking] do |f| %>
-  <%= f.input :breed, :price, :description %>
-  <%= f.submit "Submit booking", class: "btn btn-primary" %>
+  <%# <%= f.input :breed, :price, :description %>
+  <%# <%= f.submit "Submit booking", class: "btn btn-primary" %>
+<%# <% end %>
+
+<h1>Create a Chicken</h1>
+
+<%= form_with model: @chicken, url: chickens_path do |form| %>
+  <div class="field">
+    <%= form.label :breed %>
+    <%= form.text_field :breed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Create Chicken' %>
+  </div>
 <% end %>
