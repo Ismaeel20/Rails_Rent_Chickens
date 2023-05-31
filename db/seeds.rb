@@ -7,24 +7,36 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts "cleaing database"
-# destroy database
+Chicken.destroy_all
+User.destroy_all
+
 
 puts "creating users"
 edward = User.create!(email: "chicken@lewagon.com", password: "123456")
-User.create!(email: 'user1@example.com', password: 'password1')
-User.create!(email: 'user2@example.com', password: 'password2')
-User.create!(email: 'user3@example.com', password: 'password3')
+user1 = User.create!(email: 'user1@example.com', password: 'password1')
+user2 = User.create!(email: 'user2@example.com', password: 'password2')
+user3 = User.create!(email: 'user3@example.com', password: 'password3')
 
 
 chicken_1 = Chicken.new(breed: "Wild chicken", description: "A wild angry chicken", price: "20")
 chicken_1.user = edward
 chicken_1.save!
 
-Chicken.create!(breed: 'Rhode Island Red', description: 'Friendly and excellent layers.', price: 10.99, user_id: 1)
-Chicken.create!(breed: 'Ameraucana', description: 'Known for their blue eggs.', price: 12.99, user_id: 1)
-Chicken.create!(breed: 'Barred Plymouth Rock', description: 'Docile and good for families.', price: 9.99, user_id: 2)
-Chicken.create!(breed: 'Silkie', description: 'Fluffy and adorable.', price: 11.99, user_id: 2)
-Chicken.create!(breed: 'Buff Orpington', description: 'Gentle and good with children.', price: 13.99, user_id: 3)
+chicken_2 = Chicken.new(breed: 'Rhode Island Red', description: 'Friendly and excellent layers.', price: 10.99)
+chicken_2.user = user1
+chicken_2.save!
+chicken_3 = Chicken.new(breed: 'Ameraucana', description: 'Known for their blue eggs.', price: 12.99)
+chicken_3.user = user1
+chicken_3.save!
+chicken_4 = Chicken.new(breed: 'Barred Plymouth Rock', description: 'Docile and good for families.', price: 9.99)
+chicken_4.user = user2
+chicken_4.save!
+chicken_5 = Chicken.new(breed: 'Silkie', description: 'Fluffy and adorable.', price: 11.99)
+chicken_5.user = user2
+chicken_5.save!
+chicken_6 = Chicken.new(breed: 'Buff Orpington', description: 'Gentle and good with children.', price: 13.99)
+chicken_6.user = user3
+chicken_6.save!
 
 
 # Booking.create(user_id: 1, chicken_id: 1, start_date: Date.today, end_date: Date.today + 7)
