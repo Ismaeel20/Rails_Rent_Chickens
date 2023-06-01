@@ -1,15 +1,23 @@
-<h1>Your bookings :</h1>
-<ul>
-<% @bookings.each do |booking| %>
-   <li><%= booking.start_date %></li>
-  <%end %>
-</ul>
 
+<div class=" bookings container">
 
-<% if @bookings.blank? %>
-<p>There are not any bookings currently in the system.</p>
-<% else %>
-<p>These are the current bookings in our system</p>
-<% end %>
+  <h1>Your bookings</h1>
 
-<h3><%= link_to 'Create a new booking', bookings_new_path %></h3>
+  <% if @bookings.blank? %>
+    <p>There are not any bookings currently in the system.</p>
+  <% else %>
+
+    <div class="cards">
+      <% @bookings.each do |booking| %>
+      <div class="card text-center card-style" style="width: 18rem;">
+        <%= cl_image_tag booking.chicken.photo.key, height: 300, crop: :fill %>
+          <div class="card-body">
+            <h3><%= booking.chicken.breed %></h3>
+            <h4><%= booking.start_date %> - <%= booking.end_date%></h4>
+            <p> Status: Pending </p>
+          </div>
+      </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
