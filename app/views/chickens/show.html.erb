@@ -2,7 +2,7 @@
 
 <div class="chicken-show" id="chicken-egg" >
 <%# Add cl image tag for the chickens %>
- <%= cl_image_tag @chicken.photo.key , class: "images" %>
+ <%= cl_image_tag @chicken.photo.key , class: "images" if @chicken.photo.key != nil%>
 
   <h1><%= @chicken.breed %></h1>
 
