@@ -9,7 +9,7 @@ class ChickensController < ApplicationController
       sql_query = "breed ILIKE :query OR description ILIKE :query"
       @chickens = Chicken.where(sql_query, query: "%#{params[:query]}%")
     else
-      @chcikens = Chicken.all
+      @chickens = Chicken.all
     end
   end
 

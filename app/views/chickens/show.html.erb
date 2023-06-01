@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-
-<div class="chicken-show" id="chicken-egg" >
-<%# Add cl image tag for the chickens %>
- <%= cl_image_tag @chicken.photo.key , class: "images" %>
-
-  <h1><%= @chicken.breed %></h1>
-
-  <div class="chicken-details">
-  <%# Don't need to say 'Description' %>
-    <p> <%= @chicken.description %></p>
-=======
 <div class="chicken-show" >
-<h1> Chickens show page </h1>
+<%# <h1> Chickens show page </h1> %>
 </div>
 
 <div class="chicken-show" >
@@ -19,24 +7,10 @@
 
   <div class="chicken-details">
     <p><strong>Description:</strong> <%= @chicken.description %></p>
->>>>>>> a06fb192df06ac521d3d0f0e742738e53ab0fb23
     <p><strong>Price:</strong> $<%= @chicken.price %></p>
     <p><strong>Owner:</strong> <%= @chicken.user.email %></p>
   </div>
 
-<<<<<<< HEAD
-  <%# remove hyperlink styling %>
-  <div class="no-link">
-  <p><%= link_to 'Back to Chicken List', chickens_path %></p>
-
-<%# if it is your chicken, link to see requested bookings. If it's not, render booking form %>
-
-
-
-
-    </p>
-  </div>
-=======
   <p><%= link_to 'Back to Chicken List', chickens_path %></p>
 
 </div>
@@ -44,5 +18,4 @@
 
 <div class="form container mt-4">
   <%= render 'bookings/new' %>
->>>>>>> a06fb192df06ac521d3d0f0e742738e53ab0fb23
 </div>
