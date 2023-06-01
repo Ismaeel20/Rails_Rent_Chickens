@@ -2,6 +2,7 @@
 
 <div class="chicken-show" id="chicken-egg" >
 <%# Add cl image tag for the chickens %>
+
  <% if @chicken.photo.key %>
  <%= cl_image_tag @chicken.photo.key, height: 300, crop: :fill %>
  <% else %>
