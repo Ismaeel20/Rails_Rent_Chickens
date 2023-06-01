@@ -13,6 +13,7 @@ class ChickensController < ApplicationController
 
   def show
     @chicken = Chicken.find(params[:id])
+    @booking = Booking.new
   end
 
   def edit

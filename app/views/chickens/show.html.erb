@@ -5,17 +5,17 @@
 <div class="chicken-show" >
 <h1><%= @chicken.breed %></h1>
 
-<div class="chicken-details">
-  <p><strong>Description:</strong> <%= @chicken.description %></p>
-  <p><strong>Price:</strong> $<%= @chicken.price %></p>
-  <p><strong>Owner:</strong> <%= @chicken.user.email %></p>
-</div>
+  <div class="chicken-details">
+    <p><strong>Description:</strong> <%= @chicken.description %></p>
+    <p><strong>Price:</strong> $<%= @chicken.price %></p>
+    <p><strong>Owner:</strong> <%= @chicken.user.email %></p>
+  </div>
 
-<p><%= link_to 'Back to Chicken List', chickens_path %></p>
-
-
+  <p><%= link_to 'Back to Chicken List', chickens_path %></p>
 
 
-  </p>
-</div>
+
+
+    </p>
+
 </div>
