@@ -1,7 +1,32 @@
 <div class= "text-center font-weight-bold">
 
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+
+    <%= form_with url: chickens_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a chicken"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+      <div id="chickens">
+        <% @chickens.each do |chicken| %>
+          <h4><%= chicken.breed %></h4>
+          <p><%= chicken.description %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <h1>Select a Chicken</h1>
 </div>
+
 
 <div class="cards">
 
@@ -9,7 +34,7 @@
     <%# <li> %>
     <%# <div class = "chicken-container"> %>
   <div class="card" style="width: 18rem;">
-    <%= cl_image_tag chicken.photo.key, height: 300, crop: :fill %>
+    <%# <%= cl_image_tag chicken.photo.key, height: 300, crop: :fill %> %>
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
       <p class="card-text"></p>
