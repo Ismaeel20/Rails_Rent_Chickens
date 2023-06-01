@@ -12,7 +12,6 @@ class BookingsController < ApplicationController
   end
 
   def create
-
     @booking = Booking.new(booking_params)
     @chicken = Chicken.find(params[:chicken_id])
     @booking.chicken = @chicken
