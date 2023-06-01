@@ -19,6 +19,7 @@ class ChickensController < ApplicationController
 
   def show
     @chicken = Chicken.find(params[:id])
+    @booking = Booking.new
   end
 
   def edit
@@ -30,6 +31,12 @@ class ChickensController < ApplicationController
     @chicken.user = current_user
     @chicken.save
     redirect_to chicken_path(@chicken)
+  end
+
+  def destroy
+    @chicken = Chicken.find(params[:id])
+    @chicken.destroy
+    redirect_to chicken_path status: :see_other
   end
 
   private
