@@ -17,5 +17,9 @@
 
 
 <div class="form container mt-4">
+  <% if current_user != @chicken.user %>
   <%= render 'bookings/new' %>
+  <% else %>
+    <%  %>
+  <% end %>
 </div>
