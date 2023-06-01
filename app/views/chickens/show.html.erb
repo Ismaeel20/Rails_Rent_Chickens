@@ -2,7 +2,11 @@
 
 <div class="chicken-show" id="chicken-egg" >
 <%# Add cl image tag for the chickens %>
- <%= cl_image_tag @chicken.photo.key , class: "images" %>
+ <% if @chicken.photo.key %>
+ <%= cl_image_tag @chicken.photo.key, height: 300, crop: :fill %>
+ <% else %>
+    <img src="https://www.outdoorhappens.com/wp-content/uploads/2022/01/practical-yolkers.jpg" alt="" style="height: 230px;">
+  <% end %>
 
   <h1><%= @chicken.breed %></h1>
 
