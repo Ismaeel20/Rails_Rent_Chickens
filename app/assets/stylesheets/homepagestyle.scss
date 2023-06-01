@@ -11,8 +11,15 @@ body {
 }
 
 .landing-text a {
-  background-color: brown !important;
+  background-color: rgb(234, 103, 70) !important;
 }
+
+.landing-text a:hover {
+  background-color: rgb(130, 27, 2) !important;
+  color: white;
+}
+
+
 // .container {
 //   position: absolute;
 //   top: 40%;
@@ -112,4 +119,38 @@ body {
 .search {
   width: 60%;
   margin: 40px auto;
+}
+
+.chicken-create {
+  position: absolute;
+  margin: auto;
+  width: 50%;
+  top: 20%;
+  left: 25%;
+  text-align: center;
+  background-color: rgb(234, 103, 70);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chicken-create a {
+  color: white;
+  text-decoration: none;
+}
+
+.chicken-create a:hover {
+  color: rgb(134, 134, 134);
+  text-decoration: none;
+}
+
+.form-card {
+  margin-right: 150px;
+  margin-left: 170px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-decoration: none;
+  background-color: rgb(234, 103, 70);
 }

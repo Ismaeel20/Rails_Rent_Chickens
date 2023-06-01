@@ -26,7 +26,11 @@
   <% @chickens.each do |chicken| %>
   <%= link_to chicken_path(chicken) do %>
   <div class="card text-center card-style" style="width: 18rem;">
+  <% if chicken.photo.key %>
     <%= cl_image_tag chicken.photo.key, height: 300, crop: :fill %>
+  <% else %>
+    <img src="https://www.outdoorhappens.com/wp-content/uploads/2022/01/practical-yolkers.jpg" alt="" style="height: 300px;">
+  <% end %>
       <div class="card-body ">
       <h3><%= chicken.breed %></h3>
       </div>

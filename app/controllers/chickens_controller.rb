@@ -33,6 +33,12 @@ class ChickensController < ApplicationController
     redirect_to chicken_path(@chicken)
   end
 
+  def destroy
+    @chicken = Chicken.find(params[:id])
+    @chicken.destroy
+    redirect_to chicken_path status: :see_other
+  end
+
   private
 
   def chicken_params
