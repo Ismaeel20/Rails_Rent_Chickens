@@ -4,6 +4,8 @@ class Chicken < ApplicationRecord
   belongs_to :user
   has_many :bookings
 
+  validates :breed, :price, :description, presence: true
+
   has_one_attached :photo
 
   pg_search_scope :search_by_breed_and_description,

@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :chickens
+  resources :chickens do
+    resources :bookings, only: [:create]
+  end
   get "my_chickens", to: "chickens#my_chickens"
 
   get "bookings", to: "bookings#index"
-  get "bookings/new", to: "bookings#new"
+  # get "bookings/new", to: "bookings#new"
   get "bookings/:id", to: "bookings#show"
 
    #get 'my_chickens', to: "chickens#my_chickens"
