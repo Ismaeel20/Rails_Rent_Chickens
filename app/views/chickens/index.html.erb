@@ -1,24 +1,40 @@
-<div class= "text-center font-weight-bold">
-
+<%# <div class= "text-center font-weight-bold">
 <h1>Select a Chicken</h1>
+</div> %>
+
+<%# <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8"> %>
+<div class="search">
+    <%= form_with url: chickens_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a chicken"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 </div>
+
+<%#
+    </div>
+  </div>
+</div> %>
+
 
 <div class="cards">
-
   <% @chickens.each do |chicken| %>
-    <%# <li> %>
-    <%# <div class = "chicken-container"> %>
-  <div class="card" style="width: 18rem;">
+  <%= link_to chicken_path(chicken) do %>
+  <div class="card text-center card-style" style="width: 18rem;">
     <%= cl_image_tag chicken.photo.key, height: 300, crop: :fill %>
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text"></p>
-    </div>
-  <%# </div> %>
-    <%= link_to chicken.breed, chicken_path(chicken) %>
-    <%# <p><strong>Description:</strong> <%= chicken.description %></p>
-    <p><strong>Price:</strong> $<%= chicken.price %></p>
+      <div class="card-body ">
+      <h3><%= chicken.breed %></h3>
+      </div>
   </div>
-    <%# </li> %>
+    <% end %>
   <% end %>
 </div>
+
+<%#
+      <p><strong>Description:</strong> <%= chicken.description</p>
+      <%# <p><strong>Price:</strong> $<%= chicken.price</p> %>
