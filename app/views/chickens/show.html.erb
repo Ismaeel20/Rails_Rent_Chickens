@@ -25,7 +25,7 @@
 
   <%# remove hyperlink styling %>
   <div class="no-link">
-    <p><%= link_to 'Back to Chicken List', chickens_path %></p>
+    <p class="btn btn-light"><%= link_to 'Back to Chicken List', chickens_path %></p>
   </div>
   </div>
 
@@ -36,6 +36,6 @@
   <% if current_user != @chicken.user %>
   <%= render 'bookings/new' %>
   <% else %>
-    <p><%= link_to 'Go to bookings', bookings_path %></p>
+    <p class="p d-flex justify-content-center btn btn-light"><%= link_to 'My chickens', my_chickens_path %></p>
   <% end %>
 </div>
