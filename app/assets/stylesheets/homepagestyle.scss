@@ -131,19 +131,30 @@ body {
   margin: 40px auto;
 }
 
+#header-main {
+  color: white !important;
+  font-family: 'Luckiest Guy', cursive;
+}
+
 .chicken-create {
+  // position: absolute;
+  color: white;
+
   margin: 30px auto;
   width: 25%;
   text-align: center;
   background-color: rgb(234, 103, 70);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Luckiest Guy', cursive;
   padding: 5px;
 }
 
 .chicken-create a {
   color: white;
   text-decoration: none;
+
+  font-family: 'Luckiest Guy', cursive;
 }
 
 .chicken-create a:hover {
