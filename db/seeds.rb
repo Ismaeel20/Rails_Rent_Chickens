@@ -41,7 +41,7 @@ chicken_3.save!
 
 file3 = URI.open("https://homesteadsweethome.com/wp-content/uploads/2022/01/barred-rock-chicken-.jpg")
 
-chicken_4 = Chicken.new(breed: 'Barred Plymouth Rock', description: 'Docile and good for families.', price: 9.99, user_id: user1.id)
+chicken_4 = Chicken.new(breed: 'Plymouth Rock', description: 'Docile and good for families.', price: 9.99, user_id: user1.id)
 chicken_4.photo.attach(io: file3, filename: "nes.png", content_type: "image/jpg")
 
 chicken_4.save!

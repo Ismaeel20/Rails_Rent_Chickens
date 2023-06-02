@@ -4,7 +4,7 @@
       <%= image_tag "NEW NEW LOGO.png", class: "avatar" %>
     <% end %>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_tjbsxabg.json"  background="transparent"  speed="1"  style="width: 125px; height: 125px;"  loop  autoplay></lottie-player>
+<lottie-player src="https://assets8.lottiefiles.com/packages/lf20_tjbsxabg.json"  background="transparent" class="main" speed="1"  style="width: 125px; height: 125px;"  loop  autoplay></lottie-player>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@
         <% if user_signed_in? %>
           <li class="nav-item active" style="display: flex;">
             <%= link_to "Home", root_path, class: "nav-link" %>
-            <%= link_to "Add Chicken", "chickens/new", class: "nav-link" %>
+            <%= link_to "Add Chicken", new_chicken_path, class: "nav-link" %>
             <%= link_to "Chickens List", chickens_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
