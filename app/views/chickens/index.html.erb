@@ -5,6 +5,7 @@
 <%# <div class="container">
   <div class="row justify-content-center">
     <div class="col-sm-8"> %>
+
 <div class="search">
     <%= form_with url: chickens_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
@@ -12,7 +13,7 @@
     class: "form-control",
     placeholder: "Find a chicken"
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+ <div class="search-btn"><%= submit_tag "Search", class: "btn btn-primary" %></div>
 <% end %>
 </div>
 
@@ -21,24 +22,22 @@
   </div>
 </div> %>
 
-
-<div class="cards">
-  <% @chickens.each do |chicken| %>
-  <%= link_to chicken_path(chicken) do %>
-  <div class="card text-center card-style" style="width: 18rem;">
-  <% if chicken.photo.key %>
-    <%= cl_image_tag chicken.photo.key, height: 300, crop: :fill %>
-  <% else %>
-    <img src="https://www.outdoorhappens.com/wp-content/uploads/2022/01/practical-yolkers.jpg" alt="" style="height: 300px;">
-  <% end %>
-      <div class="card-body">
-      <h3><%= chicken.breed %></h3>
-      </div>
-  </div>
+  <div class="cards">
+    <% @chickens.each do |chicken| %>
+    <%= link_to chicken_path(chicken) do %>
+    <div class="card text-center card-style" style="width: 18rem;">
+    <% if chicken.photo.key %>
+      <%= cl_image_tag chicken.photo.key, height: 300, crop: :fill %>
+    <% else %>
+      <img src="https://www.outdoorhappens.com/wp-content/uploads/2022/01/practical-yolkers.jpg" alt="" style="height: 300px;">
     <% end %>
-  <% end %>
-</div>
-
+        <div class="card-body ">
+        <h3><%= chicken.breed %></h3>
+        </div>
+    </div>
+      <% end %>
+    <% end %>
+  </div>
 
 <%#
       <p><strong>Description:</strong> <%= chicken.description</p>
