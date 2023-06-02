@@ -12,7 +12,7 @@ class ChickensController < ApplicationController
     else
       @chickens = Chicken.all
     end
-    
+
   end
 
   def my_chickens
@@ -26,7 +26,17 @@ class ChickensController < ApplicationController
   end
 
   def edit
+
     @chicken = Chicken.find(params[:id])
+  end
+
+  def update
+    @chicken = Chicken.find(params[:id])
+    if @chicken.update(chicken_params)
+      redirect_to chicken_path(@chicken)
+    else
+      render 'edit', status: :unprocessable_entity
+    end
   end
 
   def create
