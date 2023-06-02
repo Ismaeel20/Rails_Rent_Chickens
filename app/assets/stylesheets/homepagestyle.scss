@@ -131,14 +131,13 @@
 }
 
 .chicken-create {
-  // position: absolute;
   margin: 30px auto;
-  width: 50%;
-  // top: 20%;
+  width: 25%;
   text-align: center;
   background-color: rgb(234, 103, 70);
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 5px;
 }
 
 .chicken-create a {
@@ -171,4 +170,26 @@
 .card-body a:hover {
   color: rgb(134, 134, 134);
   text-decoration: none;
+}
+
+
+
+.chicken-form {
+  height: 450px;
+  margin: 30px auto;
+  width: 50%;
+  text-align: center;
+  background-color: rgb(234, 103, 70);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+}
+
+.form-control {
+  margin: 20px auto !important;
+}
+
+.description {
+  color: black !important;
+
 }

@@ -6,11 +6,10 @@
     <h1 class="color=white">Your chicken friends</h1>
   </div>
 
-  <div class="chicken-create">
+   <div class="chicken-create mb-5">
     <h3><%= link_to 'Add a Chicken', new_chicken_path %><h3>
-    <h3><%= link_to 'Back to Chicken List', chickens_path %></h3>
-    </p>
   </div>
+
 </div>
 
 
@@ -33,3 +32,7 @@
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_kp0ixjwm.json"  background="transparent"  speed="1"  style="width: 350px; height: 350px;"  loop  autoplay></lottie-player>
 </div>
+
+ <div class="chicken-create mt-5">
+      <h3><%= link_to 'Back to Chicken List', chickens_path %></h3>
+    </div>
