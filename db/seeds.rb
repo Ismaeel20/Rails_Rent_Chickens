@@ -59,6 +59,12 @@ chicken_6.photo.attach(io: file5, filename: "nes.png", content_type: "image/jpg"
 
 chicken_6.save!
 
+file6 = URI.open("https://i.pinimg.com/originals/53/83/11/53831134f521222ae27454dca888e21e.png")
+chicken_7 = Chicken.new(breed: 'Roast Chicken', description: 'Does not lay eggs but needs a good home.', price: 11.99, user_id: user1.id)
+chicken_7.photo.attach(io: file6, filename: "nes.png", content_type: "image/jpg")
+
+chicken_7.save!
+
 # Booking.create(user_id: 1, chicken_id: 1, start_date: Date.today, end_date: Date.today + 7)
 # Booking.create(user_id: 2, chicken_id: 2, start_date: Date.today + 3, end_date: Date.today + 10)
 # Booking.create(user_id: 3, chicken_id: 3, start_date: Date.today + 2, end_date: Date.today + 9)

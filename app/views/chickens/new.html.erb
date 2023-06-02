@@ -6,24 +6,5 @@
 <%# <% end %>
 
 <h1>Add a Chicken</h1>
-<div class="form-card">
-<%= form_with model: @chicken, url: chickens_path do |form| %>
-  <div class="field">
-    <%= form.label :breed %>
-    <%= form.text_field :breed %>
-  </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit 'Create Chicken' %>
-  </div>
-<% end %>
+<%= render 'form' %>
