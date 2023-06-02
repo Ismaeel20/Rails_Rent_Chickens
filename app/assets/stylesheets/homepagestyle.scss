@@ -1,13 +1,16 @@
-body {
+.bg {
   background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://img.freepik.com/premium-vector/chicken-egg-seamless-pattern-background_42349-416.jpg?w=2000');
   background-size: cover;
   background-position: center;
+  margin: 0;
+  height: 80vh;
 }
 .landing-text {
   position: absolute;
   top: 40%;
-  left: 25%;
+  left: 20%;
   text-align: center;
+  right:20%
 }
 
 .landing-text a {
@@ -105,8 +108,7 @@ body {
 
 .site-information {
   background-color: #4f2703;
-  padding: 20px;
-  margin-top: 650px;
+  padding: 64px;
 }
 
 .site-information h2 {
