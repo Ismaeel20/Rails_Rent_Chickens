@@ -3,8 +3,8 @@
   color: inherit;
 }
 .images {
-  height: 300px;
-  width: 300px;
+  height: 50px;
+  width: 50px;
   padding: 10px;
   border-radius: 50%;
 }
@@ -16,14 +16,19 @@
 // //   background-color: #EBC296 !important;
 // }
 .chicken-show h1{
-  background-color: #ffffffc9;
-  font-family: 'Luckiest Guy', cursive;
+  background-color: white;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 30px;
+    color:black
 }
 .chicken-show{
   padding:60px;
 }
 #chicken-egg {
   // margin-right: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     // margin-left: 170px;
     margin-bottom: 20px;
     text-align: center;
@@ -35,3 +40,9 @@
     background-color: #EBC296 !important;
     width: 550px ;
 }
+img{
+  border-radius: 50%;
+}
+ .form-container.h1{
+  color:white;
+ }
